@@ -4,7 +4,7 @@
     <vuedog-no-favourites v-if="noFavourites"></vuedog-no-favourites>
     <div class="favourites-view" v-if="$store.getters.favourites.length">
       <vuedog-beer-list :beers="$store.getters.favourites"></vuedog-beer-list>
-      <vuedog-beer-info v-show="$store.getters.selectedBeer" :beer="$store.getters.selectedBeer"></vuedog-beer-info>
+      <vuedog-beer-info></vuedog-beer-info>
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div id="beer-info-container">
+  <div v-if="beer" id="beer-info-container">
     <vuedog-header :title="beer.name"/>
     <div id="beer-info">
       <div id="picture">
@@ -27,12 +27,14 @@ import VuedogHeader from '@/components/VuedogHeader';
 import VuedogBeerImage from '@/components/VuedogBeerImage';
 
 export default {
-  props: ['beer'],
   components: {
     'vuedog-header': VuedogHeader,
     'vuedog-beer-image': VuedogBeerImage
   },
   computed: {
+    beer(){
+      return this.$store.getters.selectedBeer
+    },
     ingredients(){
       const ingredientData = {};
       for(let ingredientKey in this.beer.ingredients){

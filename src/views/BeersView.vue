@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="beer-view" v-if="$store.getters.beers.length">
     <vuedog-beer-list :beers="$store.getters.beers"></vuedog-beer-list>
-    <vuedog-beer-info v-show="$store.getters.selectedBeer" :beer="$store.getters.selectedBeer"></vuedog-beer-info>
+    <vuedog-beer-info></vuedog-beer-info>
   </div>
 </template>
 
