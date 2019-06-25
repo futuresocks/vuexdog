@@ -25,6 +25,9 @@ export default {
 
     addFavourite: function(){
       this.$store.commit('addFavourite', this.beer)
+    },
+    removeFavourite: function(){
+      this.$store.commit('removeFavourite', this.beer)
     }
   },
   computed: {
