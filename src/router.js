@@ -6,6 +6,7 @@ import FavouritesView from '@/views/FavouritesView';
 Vue.use(Router)
 
 const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/beers',
