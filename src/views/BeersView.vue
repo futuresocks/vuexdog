@@ -11,7 +11,9 @@ import VuedogBeerList from '@/components/VuedogBeerList'
 import VuedogBeerInfo from '@/components/VuedogBeerInfo'
 
 export default {
-  props: ['beers', 'favIDs'],
+  mounted(){
+    this.$store.commit('deselectBeer')
+  },
   components: {
     "vuedog-beer-info": VuedogBeerInfo,
     "vuedog-beer-list": VuedogBeerList

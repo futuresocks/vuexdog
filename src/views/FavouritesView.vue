@@ -17,6 +17,9 @@ import VuedogNoFavourites from '@/components/VuedogNoFavourites'
 
 
 export default {
+  mounted(){
+    this.$store.commit('deselectBeer')
+  },
   computed: {
     noFavourites: function(){
       return this.$store.getters.favourites.length === 0

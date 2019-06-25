@@ -19,6 +19,9 @@ export const store = new Vuex.Store({
     setSelectedBeer(state, beer){
       state.selectedBeer = beer
     },
+    deselectBeer(state){
+      state.selectedBeer = null
+    },
     removeFavourite(state, beer){
       const index = state.favourites.indexOf(beer)
       state.favourites.splice(index, 1)
